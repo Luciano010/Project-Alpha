@@ -295,6 +295,10 @@
       "SomerenModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "7.0.0",
+          "System.Data.SqlClient": "4.8.5"
+        },
         "compile": {
           "bin/placeholder/SomerenModel.dll": {}
         },
@@ -814,27 +818,29 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "SomerenDAL >= 1.0.0",
-      "SomerenModel >= 1.0.0"
+      "SomerenModel >= 1.0.0",
+      "System.Configuration.ConfigurationManager >= 7.0.0",
+      "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\afrod\\.nuget\\packages\\": {},
+    "C:\\Users\\Beheerder\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Someren\\Someren2023\\SomerenService\\SomerenService.csproj",
+      "projectUniqueName": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenService\\SomerenService.csproj",
       "projectName": "SomerenService",
-      "projectPath": "C:\\Someren\\Someren2023\\SomerenService\\SomerenService.csproj",
-      "packagesPath": "C:\\Users\\afrod\\.nuget\\packages\\",
-      "outputPath": "C:\\Someren\\Someren2023\\SomerenService\\obj\\",
+      "projectPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenService\\SomerenService.csproj",
+      "packagesPath": "C:\\Users\\Beheerder\\.nuget\\packages\\",
+      "outputPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\afrod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Beheerder\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -850,11 +856,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Someren\\Someren2023\\SomerenDAL\\SomerenDAL.csproj": {
-              "projectPath": "C:\\Someren\\Someren2023\\SomerenDAL\\SomerenDAL.csproj"
+            "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\SomerenDAL.csproj": {
+              "projectPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\SomerenDAL.csproj"
             },
-            "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj": {
-              "projectPath": "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj"
+            "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj": {
+              "projectPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj"
             }
           }
         }
@@ -868,6 +874,16 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.5, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

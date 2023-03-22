@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Someren\\Someren2023\\SomerenDAL\\SomerenDAL.csproj": {}
+    "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\SomerenDAL.csproj": {}
   },
   "projects": {
-    "C:\\Someren\\Someren2023\\SomerenDAL\\SomerenDAL.csproj": {
+    "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\SomerenDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Someren\\Someren2023\\SomerenDAL\\SomerenDAL.csproj",
+        "projectUniqueName": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\SomerenDAL.csproj",
         "projectName": "SomerenDAL",
-        "projectPath": "C:\\Someren\\Someren2023\\SomerenDAL\\SomerenDAL.csproj",
-        "packagesPath": "C:\\Users\\afrod\\.nuget\\packages\\",
-        "outputPath": "C:\\Someren\\Someren2023\\SomerenDAL\\obj\\",
+        "projectPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\SomerenDAL.csproj",
+        "packagesPath": "C:\\Users\\Beheerder\\.nuget\\packages\\",
+        "outputPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\afrod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Beheerder\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj": {
-                "projectPath": "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj"
+              "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj": {
+                "projectPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj"
               }
             }
           }
@@ -78,20 +78,20 @@
         }
       }
     },
-    "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj": {
+    "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj",
+        "projectUniqueName": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj",
         "projectName": "SomerenModel",
-        "projectPath": "C:\\Someren\\Someren2023\\SomerenModel\\SomerenModel.csproj",
-        "packagesPath": "C:\\Users\\afrod\\.nuget\\packages\\",
-        "outputPath": "C:\\Someren\\Someren2023\\SomerenModel\\obj\\",
+        "projectPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\SomerenModel.csproj",
+        "packagesPath": "C:\\Users\\Beheerder\\.nuget\\packages\\",
+        "outputPath": "C:\\Luciano\\SCHOOL INHOLLAND\\Website Markup\\Github\\Project-Alpha\\SomerenModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\afrod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Beheerder\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -118,6 +118,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

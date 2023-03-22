@@ -185,6 +185,10 @@
         }
       },
       "SomerenModel/1.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "7.0.0",
+          "System.Data.SqlClient": "4.8.5"
+        },
         "runtime": {
           "SomerenModel.dll": {}
         }
