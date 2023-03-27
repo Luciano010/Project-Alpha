@@ -18,6 +18,7 @@ namespace SomerenUI
             // hide all other panels
             pnlStudents.Hide();
             pnlTeachers.Hide();
+            pnlKassa.Hide();
 
             // show dashboard
             pnlDashboard.Show();
@@ -27,6 +28,9 @@ namespace SomerenUI
         {
             // hide all other panels
             pnlDashboard.Hide();
+            pnlKassa.Hide();
+            pnlTeachers.Hide();
+            
 
             // show students
             pnlStudents.Show();
@@ -47,6 +51,8 @@ namespace SomerenUI
         {
             // hide all other panels
             pnlDashboard.Hide();
+            pnlKassa.Hide();
+            pnlStudents.Hide();
 
             // show Teachers
             pnlTeachers.Show();
@@ -71,40 +77,7 @@ namespace SomerenUI
 
         private void DisplayTeachers(List<Teacher> teachers)
         {
-            // clear the listview before filling it
-            listViewTeachers.Clear();
-
-            foreach (Teacher teacher in teachers)
-            {
-                ListViewItem teacherId = new ListViewItem(teacher.teacherId.ToString());
-                teacherId.Tag = teacher;
-                listViewTeachers.Items.Add(teacherId);
-
-
-                ListViewItem firstName = new ListViewItem(teacher.firstName);
-                firstName.Tag = teacher;  
-                listViewTeachers.Items.Add(firstName);
-
-                ListViewItem lastName = new ListViewItem(teacher.lastName);
-                lastName.Tag = teacher;
-                listViewTeachers.Items.Add(lastName);
-
-                ListViewItem phoneNumber = new ListViewItem(teacher.phoneNumber.ToString());
-                phoneNumber.Tag = teacher;
-                listViewTeachers.Items.Add(phoneNumber);
-
-                ListViewItem Role = new ListViewItem(teacher.Role);
-                Role.Tag = teacher;
-                listViewTeachers.Items.Add(Role);
-
-                ListViewItem Age = new ListViewItem(teacher.Age.ToString());
-                Age.Tag = teacher;
-                listViewTeachers.Items.Add(Age);
-
-                ListViewItem Number = new ListViewItem(teacher.Number.ToString());
-                Number.Tag = teacher;
-                listViewTeachers.Items.Add(Number);
-            }
+            teacherDataGridView.DataSource = teachers;
         }
 
 
@@ -117,28 +90,63 @@ namespace SomerenUI
 
         private void DisplayStudents(List<Student> students)
         {
-            // clear the listview before filling it
-            listViewStudents.Clear();
+            studentDataGridView.DataSource = students;
+        }
 
-            foreach (Student student in students)
+
+
+        //Kassa / Drinks
+        private void ShowKassaPanel()
+        {
+            // hide all other panels
+            pnlDashboard.Hide();
+            pnlTeachers.Hide();
+            pnlStudents.Hide();
+
+            // show Kassa
+            pnlKassa.Show();
+
+            try
             {
-                ListViewItem id = new ListViewItem(student.Id.ToString());
-                id.Tag = student;
-                listViewStudents.Items.Add(id);
+                // get and display all drinks
+                List<Drinks> drinks = GetDrinks();
+                DisplayDrinks(drinks);
 
-                ListViewItem firstName = new ListViewItem(student.FirstName);
-                firstName.Tag = student;
-                listViewStudents.Items.Add(firstName);
-
-                ListViewItem lastName = new ListViewItem(student.LastName);
-                lastName.Tag = student;
-                listViewStudents.Items.Add(lastName);
-
-                ListViewItem number = new ListViewItem(student.Number.ToString());
-                number.Tag = student;
-                listViewStudents.Items.Add(number);
+                // get and display all students
+                List<Student> students = GetStudents();
+                DisplayDrinksStudents(students);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong while loading the teachers: " + e.Message);
             }
         }
+
+        private List<Drinks> GetDrinks()
+        {
+            DrinksService drinksService = new DrinksService();
+            List<Drinks> drinks = drinksService.GetDrinks();
+            return drinks;
+        }
+
+        private void DisplayDrinksStudents(List<Student> students)
+        {
+            studentDrinksDataGrid.DataSource = students;
+        }
+
+        private void DisplayDrinks(List<Drinks> drinks)
+        {
+            drinksDataGridView.DataSource = drinks;
+        }
+
+
+
+
+
+
+
+
+
 
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
@@ -181,6 +189,36 @@ namespace SomerenUI
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlStudents_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bardienstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kassaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowKassaPanel();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
         {
 
         }

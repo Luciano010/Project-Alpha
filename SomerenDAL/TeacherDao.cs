@@ -33,8 +33,7 @@ namespace SomerenDAL
                     lastName = dr["lastName"].ToString(),
                     phoneNumber = (int)dr["phoneNumber"],
                     Role = dr["Role"].ToString(),
-                    Age = (int)dr["Age"],
-                    Number = (int)dr["Number"]
+                    Age = (int)dr["Age"]
                 };
                 teachers.Add(teacher);
             }
